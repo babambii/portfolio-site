@@ -3,16 +3,16 @@
     <h1>{{ msg }}</h1>
   </div>
 </template>
-
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
-@Component
+@Component({
+  name: 'HelloWorld'
+})
 export default class HelloWorld extends Vue {
-  @Prop() private msg!: string;
+  @Prop() readonly msg?: string;
 }
 </script>
 
 <style scoped>
-
 </style>
